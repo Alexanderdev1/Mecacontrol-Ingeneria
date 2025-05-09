@@ -1,8 +1,14 @@
 ---
-import Layout from '../layouts/Layout.astro';
 import '../styles/global.css';
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Slot from '../components/Slot.astro';
+import Años from '../components/Años.astro';
+
 ---
 
 <Layout>
-	
+	<Header />
+	<Slot/>
+	<Años/>
 </Layout>
