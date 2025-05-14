@@ -1,14 +1,76 @@
 ---
-import Card from "./ui/Card.astro"
+const TEXTOS = [
+    {
+        title : "Proyectos electricos",
+        descripcion: "Descripcion",
+        imagen: '',
+        class: "bg-blue-100 text-blue-200"
+    },
+    {
+        title : "Iluminacion",
+        descripcion: "Descripcion",
+        imagen: '',
+        class: "bg-yellow-100 text-yellow-200"
+    },
+    {
+        title : "Cableado Estructurado",
+        descripcion: "Descripcion",
+        imagen: '',
+        class: "bg-red-100 text-red-200"
+    }
+]
 ---
 
-<section class="py-16 bg-white text-center"> 
-    <h2 class="text-3xl font-bold text-red-600 mb-2">Nuestros servicios</h2>
-    <p class="text-gray-600 mb-10">Descripcion</p>
+<section class="mx-auto w-[1000px] h-screen mt-16">
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-4 max-w-6xl mx-auto">
-        <Card icon="☠️" titulo="Proyectos electricos" descripcion="Descripcion"/>
-        <Card icon="🦁" titulo="Iluminacion" descripcion="Descripcion"/>
-        <Card icon="🍀" titulo="Cableado Estructurado" descripcion="Descripcion"/>
+    <h2 class="text-center font-bold text-red-600 text-3xl">Nuestros servicios</h2>
+
+    <p class="mt-12 text-center">
+      Somos una empresa especializada en diseño, construcción y diagnóstico de proyectos 
+      eléctricos en media y baja tensión. Ofrecemos servicios en telecomunicaciones, automatización,
+      iluminación, ingeniería civil, arquitectura y seguridad, con un enfoque en la calidad, la innovación
+      y la seguridad en el trabajo. Brindamos soluciones eficientes y confiables adaptadas a las necesidades de cada cliente.
+    </p>
+
+    <!--Contenedor de los grid -->
+    <div class="grid grid-cols-3 gap-5 mt-12">
+        <!--Proyectos electricos -->
+        <div class=" h-[400px] rounded-2xl overflow-hidden shadow-lg hover:scale-95 hover:shadow-red-900">
+            <img src="../../public/imagenes/electricos.jpg" alt="proyectos electricos" class="h-[200px]">
+            <div class="p-7 ">
+                <h3 class="font-extrabold text-gray-800 mb-5 text-xl">Proyectos electricos</h3>
+                <p class="text-gray-700">Descripcion</p>
+            </div>
+            <div class="px-7 ">
+                <a href="#" class="text-red-700 font-bold ">Ver mas..</a>
+            </div>
+        </div>
+
+        <!--Iluminacion -->
+        <div class=" h-[400px] rounded-2xl overflow-hidden shadow-lg hover:scale-95 hover:shadow-red-900">
+            <img src="../../public/imagenes/iluminacion.jpg" alt="iluminacion" class="h-[200px]">
+            <div class="p-7 ">
+                <h3 class="font-extrabold text-gray-800 mb-5 text-xl">iluminacion</h3>
+                <p class="text-gray-700">Descripcion</p>
+            </div>
+            <div class="px-7 ">
+                <a href="#" class="text-red-700 font-bold ">Ver mas..</a>
+            </div>
+        </div>
+
+        <!--Cableado estructurado -->
+        <div class=" h-[400px] rounded-2xl overflow-hidden shadow-lg hover:shadow-red-900 hover:scale-95 transition">
+            <img src="../../public/imagenes/cableado.jpg" alt="iluminacion" class="h-[200px] w-[350px]">
+            <div class="p-7 ">
+                <h3 class="font-extrabold text-gray-800 mb-5 text-xl">Cableado Estructurado</h3>
+                <p class="text-gray-700">Descripcion</p>
+            </div>
+            <div class="px-7 ">
+                <a href="#" class="text-red-700 font-bold ">Ver mas..</a>
+            </div>
+        </div>
+
     </div>
+    
 </section>
+
