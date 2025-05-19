@@ -1,0 +1,51 @@
+---
+
+import Card from "../ui/Card.astro";
+
+const seleccionarImagen = (name:string) => `../../public/imagenes/${name}`;
+
+---
+
+<section class="mx-auto w-[1000px] h-[800px] mt-11">
+
+    <h2 class="text-center font-bold text-red-600 text-3xl">Nuestros servicios</h2>
+
+    <p class="mt-12 text-center">
+      Somos una empresa especializada en diseño, construcción y diagnóstico de proyectos 
+      eléctricos en media y baja tensión. Ofrecemos servicios en telecomunicaciones, automatización,
+      iluminación, ingeniería civil, arquitectura y seguridad, con un enfoque en la calidad, la innovación
+      y la seguridad en el trabajo. Brindamos soluciones eficientes y confiables adaptadas a las necesidades de cada cliente.
+    </p>
+
+    <!--Contenedor de los grid -->
+    <div class="grid grid-cols-3 gap-5 mt-10">
+
+        <!--Proyectos electricos -->
+        <Card 
+            imagenUrl={seleccionarImagen('electricos.jpg')} 
+            titulo="Proyectos Electricos" 
+            descripcion="Ejecutamos proyectos eléctricos integrales desde el diseño hasta la puesta en marcha,cumpliendo con estándares técnicos, normativos y de seguridad para garantizar eficiencia, confiabilidad y sostenibilidad."
+            direccion="/servicios"
+        />
+
+        <!--Iluminacion -->
+        <Card 
+            imagenUrl={seleccionarImagen('iluminacion.jpg')}
+            titulo="Iluminacion"
+            descripcion="Diseñamos e implementamos soluciones eléctricas comerciales con enfoque en seguridad, eficiencia energética e iluminación funcional y estética, adaptadas a las necesidades de cada espacio."
+            direccion="/servicios"
+        />
+    
+        <!--Cableado estructurado -->
+
+        <Card 
+            imagenUrl={seleccionarImagen('cableado.jpg')}
+            titulo="Cableado Estructurado"
+            descripcion="Diseñamos e instalamos sistemas de cableado estructurado confiables y organizados, que permiten una conectividad eficiente para voz, datos y video en entornos residenciales, comerciales e industriales."
+            direccion="/servicios"
+        
+        />
+    </div>
+    
+</section>
+

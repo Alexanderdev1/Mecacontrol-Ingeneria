@@ -1,0 +1,27 @@
+---
+interface Props{
+    titulo:string,
+    imagenUrl:string,
+    descripcion:string,
+    direccion:string
+}
+
+
+const {imagenUrl,titulo,descripcion,direccion} = Astro.props;
+---
+
+<div class="h-[450px] rounded-2xl overflow-hidden shadow-lg hover:scale-95 hover:shadow-red-900 transition-transform duration-300">
+    <div class="h-[200px] w-full overflow-hidden">
+        <img src={imagenUrl} alt={titulo} class="w-full h-full object-cover">
+    </div>
+    <div class="p-7">
+        <h3 class="font-extrabold text-gray-800 mb-7 text-xl">{titulo}</h3>
+        <p class="text-gray-700 text-xs">{descripcion}</p>
+    </div>
+    <div class="px-7">
+        <a href={direccion} class="text-red-700 font-bold hover:underline">Ver más...</a>
+    </div>
+</div>
+
+
+

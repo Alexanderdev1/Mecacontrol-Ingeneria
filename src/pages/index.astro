@@ -1,20 +1,22 @@
 ---
 import '../styles/global.css';
 import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro';
-import Slot from '../components/Slot.astro';
-import Experiencia from '../components/Experiencia.astro';
-import NuestroServicio from '../components/NuestroServicio.astro';
-import Clientes from '../components/Clientes.astro';
-import Footer from '../components/Footer.astro';
+import Header from '../components/paginaU/Header.astro';
+import Video from '../components/paginaU/Video.astro';
+import Experiencia from '../components/paginaU/Experiencia.astro';
+import NuestroServicio from '../components/paginaU/NuestroServicio.astro';
+import Diseno from '../components/paginaU/Diseno.astro';
+import Clientes from '../components/paginaU/Clientes.astro';
+import Footer from '../components/paginaU/Footer.astro';
 
 ---
 
 <Layout>
 	<Header />
-	<Slot/>
+	<Video/>
 	<Experiencia/>
 	<NuestroServicio/>
+	<Diseno/>
 	<Clientes />
 	<Footer/>
 </Layout>
