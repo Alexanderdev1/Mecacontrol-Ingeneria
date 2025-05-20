@@ -1,0 +1,16 @@
+* [33m7efbec5[m[33m ([m[1;32mmain[m[33m)[m Se realizó actualización del logo en el header
+* [33m28eaa4e[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Actualizacion de cards
+[31m|[m * [33m2fcf27d[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mtesting[m[33m, [m[1;31morigin/testing[m[33m)[m Actualizaciones de imagenes, header, footer, etc
+[31m|[m[31m/[m  
+* [33m353edd0[m Actualizacion de carpetas imagnes y components
+* [33m57c8f0c[m se agrego el footer y los contacos
+* [33meefef72[m mejoramiento
+*   [33m3644971[m Merge branch 'main' of https://github.com/Alexanderdev1/Mecacontrol-Ingeneria
+[33m|[m[34m\[m  
+[33m|[m * [33m632f7a1[m actualizacion REDMED.MD
+* [34m|[m [33m3ff1dc8[m Se mejor la parte de experiencia y nuiestros servicios
+[34m|[m[34m/[m  
+* [33m2f82e70[m Actualizacion de imagen de fondo y creacion de componentes
+* [33m3c1e053[m Se agrego el header el slot qu eseria la imagen con letra
+* [33m96f287d[m Base del proyecto  con tailwind
+* [33m716a4c9[m Base con tailwind
