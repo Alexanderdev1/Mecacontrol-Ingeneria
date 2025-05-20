@@ -1,0 +1,43 @@
+---
+import Card from "../ui/Card.astro";
+
+const seleccionarImagen = (name:string) => `../../public/imagenes/${name}`;
+---
+
+<section class="mx-auto w-[1000px] h-[800px] mt-2">
+    <h2 class="text-center font-bold text-red-600 text-3xl">Nuestros Servicios</h2>
+
+    <p class="mt-12 text-center">
+      Diseñamos soluciones electricas integrales, eficientes y seguras para proyectos residenciales, comerciales e industriales, combinando tecnologia, normativa y estetica para garantizar calidad y funcionalidad
+    </p>
+
+    <!--Contenedor de los grid -->
+    <div class="grid grid-cols-3 gap-5 mt-10">
+
+        <!--Residencial -->
+        <Card 
+            imagenUrl={seleccionarImagen("rayo.gif")}
+            titulo="Residencial"
+            descripcion="Diseñamos e implementamos sistemas electricos residenciales seguros, eficientes y esteticamente integrados, cumpliendo con la normativa vigente y adaptandonos a las necesidades de cada hogar"
+            direccion="/nuestrosDiseños"
+        />
+
+        <!--Comercial -->
+        <Card 
+            imagenUrl={seleccionarImagen("bar.jpg")}
+            titulo="Comercial"
+            descripcion="Desarrollamos sistemas eléctricos comerciales confiables y escalables, que garantizan continuidad operativa, seguridad y eficiencia energética en todo tipo de establecimientos."
+            direccion="/nuestrosDiseños"
+        />
+
+        <!--Industrial -->
+        <Card 
+            imagenUrl={seleccionarImagen("industrial.jpg")}
+            titulo="Industrial"
+            descripcion="Diseñamos e instalamos sistemas eléctricos industriales robustos, seguros y eficientes, integrando automatización, control y soluciones de iluminación adaptadas a entornos de alta exigencia."
+            direccion="/nuestrosDiseños"
+        />
+
+    </div>
+    
+</section>
