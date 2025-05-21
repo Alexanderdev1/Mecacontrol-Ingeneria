@@ -1,0 +1,51 @@
+---
+import CardSe from "../ui/CardSe.astro";
+import CardSeR from "../ui/CardSeR.astro";
+
+
+const seleccionarIcono =(name:string) => `../../public/icons/${name}`;
+const seleccionarImagem =(name:string) => `../../public/imagenes/${name}`;
+
+const datos ={
+    electricos:['uno','dos','tres']
+}
+---
+
+<section>
+    <CardSe 
+        icono={seleccionarIcono('electrico.png')}
+        titulo="Proyectos Electricos"
+        descripcion="Descripcion"
+        lista={datos.electricos}
+        imagenUrl={seleccionarImagem('cableado.jpg')}
+        enlace="/"
+    />
+
+    <CardSeR 
+        icono={seleccionarIcono('bombilla.png')}
+        titulo="Iluminacion"
+        descripcion="Descripcion"
+        lista={datos.electricos}
+        imagenUrl={seleccionarImagem('bar.jpg')}
+        enlace="/"
+    />
+
+    <CardSe 
+        icono={seleccionarIcono('wifi.png')}
+        titulo="Telecomunicaciones"
+        descripcion="Descripcion"
+        lista={datos.electricos}
+        imagenUrl={seleccionarImagem('residencial.jpg')}
+        enlace="/"
+    />
+     <CardSeR 
+        icono={seleccionarIcono('usb.png')}
+        titulo="Cableado Estructurado"
+        descripcion="Descripcion"
+        lista={datos.electricos}
+        imagenUrl={seleccionarImagem('electricos.jpg')}
+        enlace="/"
+    />
+
+
+</section>

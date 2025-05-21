@@ -1,0 +1,46 @@
+---
+interface Props {
+  icono: string
+  titulo: string
+  descripcion: string
+  lista: string[]
+  imagenUrl: string
+  enlace: string
+}
+
+const { icono, titulo, descripcion, lista, imagenUrl, enlace } = Astro.props;
+---
+
+<section class="grid grid-cols-1 md:grid-cols-2 items-center gap-x-40 gap-y-8 py-12 px-6 max-w-7xl mx-auto">
+  
+  <!-- Imagen izquierda -->
+  <div class="flex justify-end pr-6">
+    <img src={imagenUrl} alt={titulo} class="w-full max-w-md rounded-xl bg-gray-300 object-cover shadow-md" />
+  </div>
+
+  <!-- Contenido derecha -->
+  <div class="space-y-4 pl-6">
+    <div class="flex items-center gap-3">
+      <div class="bg-red-100 text-red-600 p-2 rounded-full w-10 h-10 flex items-center justify-center">
+        <img src={icono} alt={titulo} class="w-6 h-6" />
+      </div>
+      <h2 class="text-2xl font-bold uppercase">{titulo}</h2>
+    </div>
+
+    <p class="text-sm text-gray-600">{descripcion}</p>
+
+    <ul class="space-y-1 text-sm">
+      {lista.map((item) => (
+        <li class="flex items-center gap-2">
+          <span>→</span>
+          <span>{item}</span>
+        </li>
+      ))}
+    </ul>
+
+    <a href={enlace} class="inline-block bg-red-600 text-white px-5 py-2 rounded-md hover:bg-red-700 transition mt-4">
+      Solicitar información
+    </a>
+  </div>
+</section>
+
