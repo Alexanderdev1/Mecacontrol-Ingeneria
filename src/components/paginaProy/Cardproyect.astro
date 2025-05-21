@@ -1,0 +1,48 @@
+---
+
+import CardPr from '../ui/CardPr.astro'
+const seleccionarImagen= (name:string) => `../../public/imagenes/${name}`
+
+const datos={
+    gairaCafe: ["Iluminacion Para pasillos", "Iluminacion para baños", "Iluminacion para barras", "Ilumiancion para cocina"]  ,
+    elementos: ["Uno", "Dos", "Tres", "Cuatro"]  
+}
+---
+
+<section class="mx-auto w-[1000px] h-[800px] mt-2">
+    
+    <div class="grid grid-cols-2 grid-rows-4 gap-5 mt-10">
+
+       
+        <CardPr 
+            imagenUrl={seleccionarImagen("bar.jpg")}
+            tipo="Comercial"
+            titulo="Sistema de iluminacion restaurante gaira cafe bogota"
+            direccion="/nuestrosDiseños"
+            lista={datos.gairaCafe}
+            color='Azul'
+        />
+
+        <CardPr 
+            imagenUrl={seleccionarImagen("industrial.jpg")}
+            tipo="Industrial"
+            titulo="Montaje de torres de comunicación, camaras de alta capacidad, mastil para iluminacion, torres de comunicación. "
+            direccion="/nuestrosDiseños"
+            lista={datos.elementos}
+            color=''
+        />
+        <CardPr 
+            imagenUrl={seleccionarImagen("residencial.jpg")}
+            tipo="Residencial"
+            titulo="Sistema de iluminacion restaurante gaira cafe bogota"
+            direccion="/nuestrosDiseños"
+            lista={datos.elementos}
+            color='Verde'
+        />
+
+        
+
+    </div>
+    
+</section>
+

@@ -1,0 +1,43 @@
+---
+interface Props {
+  titulo: string,
+  tipo: string,
+  imagenUrl: string,
+  direccion: string,
+  lista: string[];
+  color:string;
+}
+
+const { imagenUrl, tipo, titulo, direccion, lista, color} = Astro.props;
+
+
+let colorDefecto = "bg-red-100 text-red-600"
+if (color == "Azul") colorDefecto = "bg-blue-100 text-blue-600"; 
+if (color == "Verde") colorDefecto = "bg-emerald-100 text-emerald-600"; 
+---
+
+<div class="max-w-sm rounded-2xl overflow-hidden shadow-lg hover:scale-95 hover:shadow-red-900 transition-transform duration-300 ">
+  <div class= "h-[200px] w-full overflow-hidden">
+    <img src={imagenUrl} alt={titulo}>
+  </div>
+
+  <div class="p-4 space-y-3">
+    <span class={`text-xs font-semibold px-3 py-1 rounded-full inline-block ${colorDefecto}`}>
+      {tipo}
+    </span>
+
+    <div>
+      <h2 class="font-bold text-gray-800 text-sm">{titulo}</h2>
+    </div>
+
+    <ul class="space-y-1 text-sm">
+      {lista.map(item => (
+        <h4 class="hover:text-red-500 cursor-default">→ {item}</h4>
+      ))}
+    </ul>
+
+    <a href={direccion} class="text-red-500 text-sm font-medium hover:underline">
+      Ver detalles →
+    </a>
+  </div>
+</div>
