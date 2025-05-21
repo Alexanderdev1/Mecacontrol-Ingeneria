@@ -9,40 +9,33 @@ const datos={
 }
 ---
 
-<section class="mx-auto w-[1000px] h-[800px] mt-2">
-    
-    <div class="grid grid-cols-2 grid-rows-4 gap-5 mt-10">
+<section class="mx-auto max-w-6xl mt-10 px-4">
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
+    <CardPr 
+      imagenUrl={seleccionarImagen("bar.jpg")}
+      tipo="Comercial"
+      titulo="Sistema de iluminación restaurante gaira café Bogotá"
+      direccion="/nuestrosDiseños"
+      lista={datos.gairaCafe}
+      color="Azul"
+    />
 
-       
-        <CardPr 
-            imagenUrl={seleccionarImagen("bar.jpg")}
-            tipo="Comercial"
-            titulo="Sistema de iluminacion restaurante gaira cafe bogota"
-            direccion="/nuestrosDiseños"
-            lista={datos.gairaCafe}
-            color='Azul'
-        />
+    <CardPr 
+      imagenUrl={seleccionarImagen("industrial.jpg")}
+      tipo="Industrial"
+      titulo="Montaje de torres de comunicación, cámaras de alta capacidad, mástil para iluminación, torres de comunicación."
+      direccion="/nuestrosDiseños"
+      lista={datos.elementos}
+      color=""
+    />
 
-        <CardPr 
-            imagenUrl={seleccionarImagen("industrial.jpg")}
-            tipo="Industrial"
-            titulo="Montaje de torres de comunicación, camaras de alta capacidad, mastil para iluminacion, torres de comunicación. "
-            direccion="/nuestrosDiseños"
-            lista={datos.elementos}
-            color=''
-        />
-        <CardPr 
-            imagenUrl={seleccionarImagen("residencial.jpg")}
-            tipo="Residencial"
-            titulo="Sistema de iluminacion restaurante gaira cafe bogota"
-            direccion="/nuestrosDiseños"
-            lista={datos.elementos}
-            color='Verde'
-        />
-
-        
-
-    </div>
-    
+    <CardPr 
+      imagenUrl={seleccionarImagen("residencial.jpg")}
+      tipo="Residencial"
+      titulo="Sistema de iluminación restaurante gaira café Bogotá"
+      direccion="/nuestrosDiseños"
+      lista={datos.elementos}
+      color="Verde"
+    />
+  </div>
 </section>
-
