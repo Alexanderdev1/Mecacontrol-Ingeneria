@@ -2,12 +2,12 @@
 const {titulo,descripcion,imagenUrl} = Astro.props;
 ---
 
-<section class="bg-red-600 px-10 py-12 mb-24 w-full h-[500px]">
+<section class="bg-black/90 px-10 py-12 mb-24 w-full h-[500px]">
   <div class="max-w-[1300px] mx-auto flex flex-col md:flex-row justify-between items-center h-full">
 
     <!-- Columna izquierda -->
     <div class="md:w-1/2 mb-8 md:mb-0">
-      <h2 class="text-4xl font-bold text-white tracking-tighter mb-4">{titulo}</h2>
+      <h2 class="text-4xl font-bold text-red-600 tracking-tighter mb-4">{titulo}</h2>
       <p class="text-lg text-white leading-relaxed">
        {descripcion}
       </p>
