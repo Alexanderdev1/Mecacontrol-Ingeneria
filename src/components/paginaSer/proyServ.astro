@@ -1,51 +1,34 @@
 ---
-import CardSe from "../ui/CardSe.astro";
 import CardSeR from "../ui/CardSeR.astro";
-
-
-const seleccionarIcono =(name:string) => `../../public/icons/${name}`;
-const seleccionarImagem =(name:string) => `../../public/imagenes/${name}`;
-
-const datos ={
-    electricos:['uno','dos','tres']
-}
 ---
 
 <section>
-    <CardSe 
-        icono={seleccionarIcono('electrico.png')}
-        titulo="Proyectos Electricos"
-        descripcion="Descripcion"
-        lista={datos.electricos}
-        imagenUrl={seleccionarImagem('cableado.jpg')}
-        enlace="/"
-    />
-
     <CardSeR 
-        icono={seleccionarIcono('bombilla.png')}
-        titulo="Iluminacion"
-        descripcion="Descripcion"
-        lista={datos.electricos}
-        imagenUrl={seleccionarImagem('bar.jpg')}
-        enlace="/"
-    />
+       icono="/icons/libro.png"
+       titulo="Proyectos Electricos"
+       descripcion="Instalaciónes electricas acorde a normativa NTC2050 y RETIE."
+       imagenUrl="/imagenes/cableado.jpg"
+       enlace="/contacto"
+       listaA={[
+         "Circuitos electricos",
+         "Circuitos de iluminación",
+         "Circuitos especiales",
+         "Sistema de puesta a tierra",
+         "Control electrico",
+         "Diseño y levantamiento de informacion (Planos)"
 
-    <CardSe 
-        icono={seleccionarIcono('wifi.png')}
-        titulo="Telecomunicaciones"
-        descripcion="Descripcion"
-        lista={datos.electricos}
-        imagenUrl={seleccionarImagem('residencial.jpg')}
-        enlace="/"
-    />
-     <CardSeR 
-        icono={seleccionarIcono('usb.png')}
-        titulo="Cableado Estructurado"
-        descripcion="Descripcion"
-        lista={datos.electricos}
-        imagenUrl={seleccionarImagem('electricos.jpg')}
-        enlace="/"
-    />
+       ]}
+       listaB={[
+         "Acometidas electricas",
+         "Circuitos de potencia",
+         "Circuitos de iluminacion comercial e industrial",
+         "Circuitos de 440v",
+         "Distribucion electrica por electrobarras",
+         "Mantenimiento electrico",
+         "Montaje de subetsaciones electricas",
+         "Diseño y levantamiento de informacion (Planos)"
+       ]}
+/>
 
 
 </section>
