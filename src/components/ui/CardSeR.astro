@@ -3,15 +3,16 @@ interface Props {
   icono: string
   titulo: string
   descripcion: string
-  lista: string[]
+  listaA: string[]
+  listaB: string[]
   imagenUrl: string
   enlace: string
 }
 
-const { icono, titulo, descripcion, lista, imagenUrl, enlace } = Astro.props;
+const { icono, titulo, descripcion, listaA, listaB, imagenUrl, enlace } = Astro.props;
 ---
 
-<section class="grid grid-cols-1 md:grid-cols-2 items-center gap-x-40 gap-y-8 py-12 px-6 max-w-7xl mx-auto">
+<section class="grid grid-cols-1 md:grid-cols-2 items-center gap-x-40 gap-y-8 py-12 px-6 max-w-7xl mx-auto relative-group">
   
   <!-- Imagen izquierda -->
   <div class="flex justify-end pr-6">
@@ -19,28 +20,68 @@ const { icono, titulo, descripcion, lista, imagenUrl, enlace } = Astro.props;
   </div>
 
   <!-- Contenido derecha -->
-  <div class="space-y-4 pl-6">
+  <div class="space-y-4 pl-6" id="card-container">
     <div class="flex items-center gap-3">
       <div class="bg-red-100 text-red-600 p-2 rounded-full w-10 h-10 flex items-center justify-center">
         <img src={icono} alt={titulo} class="w-6 h-6" />
       </div>
-      <h2 class="text-2xl font-bold uppercase">{titulo}</h2>
+      <div>
+        <h2 class="text-2xl font-bold uppercase">{titulo}</h2>
+        <p id="subtitulo" class="text-sm text-gray-500">Baja tensión</p>
+      </div>
     </div>
 
     <p class="text-sm text-gray-600">{descripcion}</p>
 
-    <ul class="space-y-1 text-sm">
-      {lista.map((item) => (
+    <div id="listaA" class="space-y-1 text-sm">
+      {listaA.map((item) => (
         <li class="flex items-center gap-2">
           <span>→</span>
           <span>{item}</span>
         </li>
       ))}
-    </ul>
+    </div>
 
-    <a href={enlace} class="inline-block bg-red-600 text-white px-5 py-2 rounded-md hover:bg-red-700 transition mt-4">
-      Solicitar información
-    </a>
+    <div id="listaB" class="space-y-1 text-sm hidden">
+      {listaB.map((item) => (
+        <li class="flex items-center gap-2">
+          <span>→</span>
+          <span>{item}</span>
+        </li>
+      ))}
+    </div>  
+
+     <div class="flex gap-4 mt-4">
+      <a href={enlace} class="bg-red-600 text-white px-5 py-2 rounded-md hover:bg-red-700 transition">
+        Solicitar información
+      </a>
+      <button
+        id="toggleBtn"
+        class="bg-gray-200 text-gray-800 px-4 py-2 rounded-md hover:bg-gray-300 transition"
+      >
+        Media tensión 
+      </button>
+    </div>
   </div>
+
 </section>
+
+<script is:inline>
+    const btn = document.getElementById("toggleBtn");
+    const listaA = document.getElementById("listaA");
+    const listaB = document.getElementById("listaB");
+    const subtitulo = document.getElementById("subtitulo");
+
+    let mostrandoA = true;
+
+    btn.addEventListener("click", () => {
+      mostrandoA = !mostrandoA;
+
+      listaA.classList.toggle("hidden", !mostrandoA);
+      listaB.classList.toggle("hidden", mostrandoA);
+
+      btn.textContent = mostrandoA ? "Ver Baja tensión" : "Ver Media tensión";
+      subtitulo.textContent = mostrandoA ? "Baja tensión" : "Media tensión";
+    });
+</script>
 
