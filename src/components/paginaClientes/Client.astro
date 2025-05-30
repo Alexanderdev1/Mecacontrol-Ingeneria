@@ -1,25 +1,125 @@
 ---
 import CardCli from "../ui/CardCli.astro";
-const seleccionarImagen =(name:string) => `../../public/imagenes/${name}`;
+const seleccionarImagen =(name:string) => `../../public/imagenes/logosEmpresas/comercial/${name}`;
+
+const seleccionarIndustial =(name:string) => `../../public/imagenes/logosEmpresas/Industrial/${name}`;
+
+const seleccionarResidencial =(name:string) => `../../public/imagenes/logosEmpresas/Residencial/${name}`;
 
 const cards = [
   {
-    nombre: "desk",
-    categoria: "empresa",
-    descripcion: "uwuw",
-    imagenUrl: seleccionarImagen('coliseo.png'),
+    nombre: "Gaira Café Cumbia House / Carlos Vives",
+    categoria: "Comercial",
+    descripcion: "",
+    imagenUrl: seleccionarImagen('gaira.webp'),
   },
   {
-    nombre: "desk",
-    categoria: "empresa",
-    descripcion: "uwuw",
-    imagenUrl: seleccionarImagen('veolia.png'),
+    nombre: "Proactiva (oficinas en Bogotá)",
+    categoria: "Comercial",
+    descripcion: "",
+    imagenUrl: seleccionarImagen(''),
   },
   {
-    nombre: "desk",
-    categoria: "empresa",
-    descripcion: "uwuw",
-    imagenUrl: seleccionarImagen('disarko.png'),
+    nombre: "PDV S.A. (oficinas en Bogotá)",
+    categoria: "Comercial",
+    descripcion: "",
+    imagenUrl: seleccionarImagen('PDV.webp'),
+  },
+  {
+    nombre: "Andrés Carne de Res ",
+    categoria: "Comercial",
+    descripcion: "Bogotá - Medellin",
+    imagenUrl: seleccionarImagen('andres.webp'),
+  },
+  {
+    nombre: "VEOLIA (Edificio AB Proyectos – Bogotá) ",
+    categoria: "Comercial",
+    descripcion: "",
+    imagenUrl: seleccionarImagen('veolia.webp'),
+  },
+  {
+    nombre: "Tiendas ARA (varias sedes)",
+    categoria: "Comercial",
+    descripcion: "",
+    imagenUrl: seleccionarImagen('ara.webp'),
+  },
+  {
+    nombre: "Centro Comercial Unilago",
+    categoria: "Comercial",
+    descripcion: "",
+    imagenUrl: seleccionarImagen('unilago.webp'),
+  },
+  {
+    nombre: "Salitre Mágico",
+    categoria: "Comercial",
+    descripcion: "",
+    imagenUrl: seleccionarImagen('salitre.webp'),
+  },
+  {
+    nombre: "Coliseo Live Entertainment ",
+    categoria: "Comercial",
+    descripcion: "Cota (Cundinamarca)",
+    imagenUrl: seleccionarImagen('coliseo.webp'),
+  },
+  
+
+  //INDUSTRIAL
+  {
+    nombre: "Armada Nacional – Comando de Operaciones ",
+    categoria: "Industrial",
+    descripcion: "",
+    imagenUrl: seleccionarIndustial('armada.webp'),
+  },
+  {
+    nombre: "Aeropuerto Militar CATAM",
+    categoria: "Industrial",
+    descripcion: "",
+    imagenUrl: seleccionarIndustial('catam.webp'),
+  },
+  {
+    nombre: "Holcim ",
+    categoria: "Industrial",
+    descripcion: "Varias sedes",
+    imagenUrl: seleccionarIndustial('holcim.webp'),
+  },
+  {
+    nombre: "Coca-Cola ",
+    categoria: "Industrial",
+    descripcion: "Taller automotriz – Bogotá Norte",
+    imagenUrl: seleccionarIndustial('cocacola.webp'),
+  },
+
+
+  //RESIDENCIAL
+  {
+    nombre: "Iglesia El Lugar de Su Presencia",
+    categoria: "Residencial",
+    descripcion: "",
+    imagenUrl: seleccionarResidencial('iglesia.webp'),
+  },
+  {
+    nombre: "Universidad Militar Nueva Granada",
+    categoria: "Residencial",
+    descripcion: "",
+    imagenUrl: seleccionarResidencial('militar.webp'),
+  },
+  {
+    nombre: "Colegio Nueva Inglaterra",
+    categoria: "Residencial",
+    descripcion: "",
+    imagenUrl: seleccionarResidencial('colegio.webp'),
+  },
+  {
+    nombre: "Escuela Militar",
+    categoria: "Residencial",
+    descripcion: "",
+    imagenUrl: seleccionarResidencial('militar.webp'),
+  },
+  {
+    nombre: "Policía Nacional",
+    categoria: "Residencial",
+    descripcion: "Dirección de Protección y Servicios Especiales",
+    imagenUrl: seleccionarResidencial('policia.webp'),
   },
   
 ];

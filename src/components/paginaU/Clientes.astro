@@ -2,7 +2,7 @@
 
 import ImgCard from "../ui/imgCard.astro";
 
-const seleccionarImagen = (name:string) => `../../public/imagenes/${name}`;
+const seleccionarImag = (name:string) => `../../public/imagenes/logosEmpresas/comercial/${name}`;
 ---
 
 <section class="mx-auto w-[1000px] h-[800px] mt-1 mb-10">
@@ -10,8 +10,8 @@ const seleccionarImagen = (name:string) => `../../public/imagenes/${name}`;
     <p class="text-center mt-12">Estos son unos de nuestros clientes que confiaron en nosotros</p>
 
     <div class="grid grid-cols-3 gap-6 mt-12">
-        <ImgCard imagenUrl={seleccionarImagen("disarko.png")} titulo="Disarko"/>
-        <ImgCard imagenUrl={seleccionarImagen("coliseo.png")} titulo="Coliseo Medplus"/>
-        <ImgCard imagenUrl={seleccionarImagen("veolia.png")} titulo="Veolia"/>
+        <ImgCard imagenUrl={seleccionarImag("disarko.webp")} titulo="Disarko"/>
+        <ImgCard imagenUrl={seleccionarImag("coliseo.webp")} titulo="Coliseo Medplus"/>
+        <ImgCard imagenUrl={seleccionarImag("veolia.webp")} titulo="Veolia"/>
     </div>
 </section>
