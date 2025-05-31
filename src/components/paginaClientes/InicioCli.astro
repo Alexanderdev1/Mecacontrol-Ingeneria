@@ -1,7 +1,7 @@
 ---
 import Slider from "../ui/Slider.astro"
 
-const seleccionarImagem =(name:string) => `../../public/imagenes/${name}`;
+const seleccionarImagem =(name:string) => `/imagenes/${name}`;
 ---
 
 <Slider titulo="Nuestros Clientes" descripcion="Empresas líderes en diversos sectores confían en nuestros servicios de ingeniería eléctrica para sus proyectos más importantes." imagenUrl={seleccionarImagem('contacto.jpg')}/>

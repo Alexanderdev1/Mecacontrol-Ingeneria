@@ -1,7 +1,6 @@
 ---
 import Card from "../ui/Card.astro";
 
-const seleccionarImagen = (name:string) => `../../public/imagenes/${name}`;
 ---
 
 <section class="mx-auto w-[1000px] h-[800px] mt-2">
@@ -16,7 +15,7 @@ const seleccionarImagen = (name:string) => `../../public/imagenes/${name}`;
 
         <!--Residencial -->
         <Card 
-            imagenUrl={seleccionarImagen("residencial.webp")}
+            imagenUrl="/imagenes/residencial.webp"
             titulo="Residencial"
             descripcion="Soluciones integrales en distribución eléctrica, iluminación, automatización y telecomunicaciones adaptadas a espacios habitacionales modernos y seguros."
             direccion="/nuestrosDiseños"
@@ -24,7 +23,7 @@ const seleccionarImagen = (name:string) => `../../public/imagenes/${name}`;
 
         <!--Comercial -->
         <Card 
-            imagenUrl={seleccionarImagen("bar.webp")}
+            imagenUrl="/imagenes/bar.webp"
             titulo="Comercial"
             descripcion="Diseño de instalaciones eficientes y funcionales que integran energía, redes, seguridad electrónica e iluminación para oficinas, locales y centros comerciales."
             direccion="/nuestrosDiseños"
@@ -32,7 +31,7 @@ const seleccionarImagen = (name:string) => `../../public/imagenes/${name}`;
 
         <!--Industrial -->
         <Card 
-            imagenUrl={seleccionarImagen("industrial.webp")}
+            imagenUrl="/imagenes/industrial.webp"
             titulo="Industrial"
             descripcion="Desarrollo de sistemas eléctricos de potencia, automatización de procesos, cableado estructurado y telecomunicaciones de alta capacidad para plantas y entornos productivos."
             direccion="/nuestrosDiseños"

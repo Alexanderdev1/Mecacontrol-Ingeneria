@@ -1,9 +1,5 @@
 ---
-
 import Card from "../ui/Card.astro";
-
-const seleccionarImagen = (name:string) => `../../public/imagenes/${name}`;
-
 ---
 
 <section class="mx-auto w-[1000px] h-[1700px] mt-11">
@@ -22,7 +18,7 @@ const seleccionarImagen = (name:string) => `../../public/imagenes/${name}`;
 
         <!--Proyectos electricos -->
         <Card 
-            imagenUrl={seleccionarImagen('electricos.jpg')} 
+            imagenUrl="/imagenes/electricos.jpg"
             titulo="Proyectos Electricos" 
             descripcion="Instalaciones eléctricas en media y baja tensión, subestaciones, tableros de distribución y sistemas de puesta a tierra para edificaciones comerciales, industriales y residenciales."
             direccion="/servicios"
@@ -30,7 +26,7 @@ const seleccionarImagen = (name:string) => `../../public/imagenes/${name}`;
 
         <!--Iluminacion -->
         <Card 
-            imagenUrl={seleccionarImagen('telecomunicaciones.webp')}
+            imagenUrl="/imagenes/telecomunicaciones.webp"
             titulo="Telecomunicaciones"
             descripcion="Diseño e implementación de redes de voz y datos, fibra óptica, enlaces inalámbricos y telefonía IP."
             direccion="/servicios"
@@ -39,49 +35,49 @@ const seleccionarImagen = (name:string) => `../../public/imagenes/${name}`;
         <!--Cableado estructurado -->
 
         <Card 
-            imagenUrl={seleccionarImagen('cableado.webp')}
+            imagenUrl="/imagenes/cableado.webp"
             titulo="Cableado Estructurado"
             descripcion="Soluciones completas en infraestructura de red, desde canalización hasta certificación, garantizando conectividad eficiente, segura y escalable."
             direccion="/servicios"
         />
 
         <Card 
-            imagenUrl={seleccionarImagen('electricidadBaja.webp')}
+            imagenUrl="/imagenes/electricidadBaja.webp"
             titulo="Electricidad Media y baja tencion"
             descripcion="Diseño, instalación y mantenimiento de redes eléctricas, subestaciones y tableros para proyectos industriales, comerciales y residenciales."
             direccion="/servicios"
         />
 
         <Card 
-            imagenUrl={seleccionarImagen('seguridad.webp')}
+            imagenUrl="/imagenes/seguridad.webp" 
             titulo="Seguridad Electronica"
             descripcion=" Implementación de sistemas de videovigilancia, alarmas, control de acceso, detección de incendios y protección perimetral."
             direccion="/servicios"
         />
 
         <Card 
-            imagenUrl={seleccionarImagen('automatizacion.webp')}
+            imagenUrl="/imagenes/automatizacion.webp" 
             titulo="Automatizacion"
             descripcion="Soluciones en automatización industrial, domótica, instrumentación de campo y sistemas SCADA."
             direccion="/servicios"
         />
 
         <Card 
-            imagenUrl={seleccionarImagen('civil.webp')}
+            imagenUrl="/imagenes/civil.webp" 
             titulo="Ingeneria civil"
             descripcion="Construcción de obras civiles como viviendas, bodegas, muros de contención, y estructuras técnicas para redes eléctricas."
             direccion="/servicios"
         />
 
         <Card 
-            imagenUrl={seleccionarImagen('arquitectura.webp')}
+            imagenUrl="/imagenes/arquitectura.webp" 
             titulo="Arquitectura"
             descripcion="Diseño arquitectónico enfocado en integración eficiente con sistemas eléctricos, telecomunicaciones e iluminación."
             direccion="/servicios"
         />
 
          <Card 
-            imagenUrl={seleccionarImagen('iluminacion.webp')}
+            imagenUrl="/imagenes/iluminacion.webp" 
             titulo="Iluminacion"
             descripcion="Proyectos de iluminación interior y exterior con enfoque estético, funcional y de eficiencia energética."
             direccion="/servicios"

@@ -2,7 +2,7 @@
 import '../../styles/global.css'
 import Slider from "../ui/Slider.astro"
 
-const seleccionarImagem =(name:string) => `../../public/imagenes/${name}`;
+const seleccionarImagem =(name:string) => `/imagenes/${name}`;
 ---
 
 <Slider titulo="Sobre Nosotros" descripcion="Somos un equipo de profesionales con amplia experiencia en el sector eléctrico, comprometidos con la excelencia y la satisfacción de nuestros clientes" imagenUrl={seleccionarImagem('sobreNosotros.webp')}/>
