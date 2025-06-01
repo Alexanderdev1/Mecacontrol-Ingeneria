@@ -6,19 +6,22 @@
     <h2 class="text-2xl font-bold text-red-600 uppercase mb-2">Envianos un mensaje</h2>
     <p class="text-sm text-gray-600 mb-6">Completa el formulario y nos comunicaremos con ustedes</p>
 
-    <form class="space-y-4">
+    <form class="space-y-4" action="https://formsubmit.co/jd72351@gmail.com" method="POST">
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <input type="text" placeholder="Nombre" class="border rounded-2xl p-2 w-full bg-gray-200 font-medium" />
-        <input type="email" placeholder="Correo electrónico" class="border rounded-2xl p-2 w-full bg-gray-200 font-medium" />
+        <input type="text" placeholder="Nombre" name="Nombre" class="border rounded-2xl p-2 w-full bg-gray-200 font-medium" />
+        <input type="email" placeholder="Correo electrónico" name="Email" class="border rounded-2xl p-2 w-full bg-gray-200 font-medium" />
       </div>
 
-      <input type="text" placeholder="Teléfono" class="border rounded-2xl p-2 w-full bg-gray-200 font-medium" />
-      <input type="text" placeholder="Asunto" class="border rounded-2xl p-2 w-full bg-gray-200 font-medium" />
-      <textarea placeholder="Mensaje" rows="5" class="border rounded-2xl p-2 w-full bg-gray-200 font-medium"></textarea>
+      <input type="text" placeholder="Teléfono" name="Telefono" class="border rounded-2xl p-2 w-full bg-gray-200 font-medium" />
+      <input type="text" placeholder="Asunto" name="Asunto" class="border rounded-2xl p-2 w-full bg-gray-200 font-medium" />
+      <textarea placeholder="Mensaje" rows="5" name="Mensaje" class="border rounded-2xl p-2 w-full bg-gray-200 font-medium"></textarea>
 
       <button type="submit" class="bg-red-600 text-white px-4 py-2 rounded-2xl hover:bg-red-700">
         Enviar Mensaje
       </button>
+
+      <input type="hidden" name="_next" value="http://localhost:4321">
+      <input type="hidden" name="_captcha" value="false">
     </form>
   </div>
 
@@ -29,7 +32,7 @@
 
     <div class="space-y-5 text-sm text-gray-700">
       <div class="flex items-start gap-2">
-        <img src="../../public/icons/llamada.png" alt="Telefono" class="w-5 h-5">
+        <img src="/icons/llamada.webp" alt="Telefono" class="w-5 h-5">
         <div>
           <p>Teléfono</p>
           <p class="text-gray-500">310 3118182</p>
@@ -37,7 +40,7 @@
       </div>
 
       <div class="flex items-start gap-2">
-        <img src="../../public/icons/correo.png" alt="Correo" class="w-5 h-5">
+        <img src="/icons/correo.webp" alt="Correo" class="w-5 h-5">
         <div>
           <p>Correo electrónico</p>
           <p class="text-gray-500">mecacontrol2012@gmail.com</p>
@@ -45,7 +48,7 @@
       </div>
 
       <div class="flex items-start gap-2">
-        <img src="../../public/icons/locacion.png" alt="Ubicacion" class="w-5 h-5">
+        <img src="/icons/locacion.webp" alt="Ubicacion" class="w-5 h-5">
         <div>
           <p>Ubicación</p>
           <p class="text-gray-500">Cl. 58d Sur #84-11 Bogotá</p>
@@ -53,7 +56,7 @@
       </div>
 
       <div class="flex items-start gap-2">
-        <img src="../../public/icons/calendario.png" alt="Calendario" class="w-5 h-5">
+        <img src="/icons/calendario.webp" alt="Calendario" class="w-5 h-5">
         <div>
           <p>Horario de atención</p>
           <p class="text-gray-500">8:00 AM A 8:00PM</p>

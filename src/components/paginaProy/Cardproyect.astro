@@ -1,41 +1,135 @@
 ---
 
 import CardPr from '../ui/CardPr.astro'
-const seleccionarImagen= (name:string) => `../../public/imagenes/${name}`
+const seleccionarImagen= (name:string) => `/imagenes/${name}`
 
 const datos={
-    gairaCafe: ["Iluminacion Para pasillos", "Iluminacion para baños", "Iluminacion para barras", "Ilumiancion para cocina"]  ,
-    elementos: ["Uno", "Dos", "Tres", "Cuatro"]  
+    gairaCafe: ["Diseño Electrico", "Iluminacion", "Comunicaciones", "Montaje en media tension"]  ,
+    holcim: ["Montaje de redes eléctricas", "Iluminacion", "Telecomunicaciones"] ,
+    iglesia: ["Proyecto eléctrico","Iluminación","Telecomunicaciones"] ,
+    campamentos: ["Instalación Eléctrica","Iluminación","Cableado Estructurado", "Seguridad"],
+    oficinas:["Proyecto Eléctrico","Iluminacion", "Cableado Estructurado(voz,datos,seguridad,biometría)"],
+    colegios:["Redes de cableado estructurado para laboratorios de idiomas"],
+    universidad:["Sistema eléctrico", "Iluminacion"],
+    oficinasPD:["Proyecto eléctrico","Telecomunicaciones","Iluminación","Arquitectura", "Obras civiles"],
+    taller:["Adecuación eléctrica","Iluminación","Cableado Estructurado"],
+    andres:["Instalaciones eléctricas","Telecomunicaciones","Iluminación"],
+    veolia:["Remodelación","Proyecto Eléctrico","Telecomunicaciones"],
+    coliseo:["Diseño y ejecución de todo el sistema eléctrico","Telecomunicaciones","Iluminación","Seguridad"]
 }
 ---
 
 <section class="mx-auto max-w-6xl mt-10 px-4">
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
     <CardPr 
-      imagenUrl={seleccionarImagen("bar.jpg")}
+      imagenUrl={seleccionarImagen("bar.webp")}
       tipo="Comercial"
-      titulo="Sistema de iluminación restaurante gaira café Bogotá"
+      titulo="Restaurante Gaira Café Cumbia House (Carlos Vives) – Bogotá"
       direccion="/nuestrosDiseños"
       lista={datos.gairaCafe}
       color="Azul"
     />
 
     <CardPr 
-      imagenUrl={seleccionarImagen("industrial.jpg")}
+      imagenUrl={seleccionarImagen("industrial.webp")}
       tipo="Industrial"
-      titulo="Montaje de torres de comunicación, cámaras de alta capacidad, mástil para iluminación, torres de comunicación."
+      titulo="Holcim – Varias sedes."
       direccion="/nuestrosDiseños"
-      lista={datos.elementos}
+      lista={datos.holcim}
       color=""
     />
 
     <CardPr 
-      imagenUrl={seleccionarImagen("residencial.jpg")}
+      imagenUrl={seleccionarImagen("residencial.webp")}
       tipo="Residencial"
-      titulo="Sistema de iluminación restaurante gaira café Bogotá"
+      titulo="Estudios de Grabación Iglesia El Lugar de Su Presencia"
       direccion="/nuestrosDiseños"
-      lista={datos.elementos}
+      lista={datos.iglesia}
       color="Verde"
     />
+
+    <CardPr 
+      imagenUrl={seleccionarImagen("industrial.webp")}
+      tipo="Industrial"
+      titulo="Campamentos Ruta del Sol – Tramo 1 (Guaduas – Puerto Salgar)"
+      direccion="/nuestrosDiseños"
+      lista={datos.campamentos}
+      color=""
+    />
+
+    <CardPr 
+      imagenUrl={seleccionarImagen("bar.webp")}
+      tipo="Comercial"
+      titulo="Oficinas Proactiva – Bogotá"
+      direccion="/nuestrosDiseños"
+      lista={datos.oficinas}
+      color="Azul"
+    />
+
+    <CardPr 
+      imagenUrl={seleccionarImagen("residencial.webp")}
+      tipo="Residencial"
+      titulo="Colegios Municipales de Casanare (Pore, Trinidad, etc.)"
+      direccion="/nuestrosDiseños"
+      lista={datos.colegios}
+      color="Verde"
+    />
+
+    <CardPr 
+      imagenUrl={seleccionarImagen("residencial.webp")}
+      tipo="Residencial"
+      titulo="Universidad Militar y Colegio Nueva Inglaterra"
+      direccion="/nuestrosDiseños"
+      lista={datos.universidad}
+      color="Verde"
+    />
+
+    <CardPr 
+      imagenUrl={seleccionarImagen("bar.webp")}
+      tipo="Comercial"
+      titulo="Oficinas PDV S.A – Bogotá"
+      direccion="/nuestrosDiseños"
+      lista={datos.oficinasPD}
+      color="Azul"
+    />
+
+    <CardPr 
+      imagenUrl={seleccionarImagen("industrial.webp")}
+      tipo="Industrial"
+      titulo="Taller Automotriz Coca-Cola – Bogotá"
+      direccion="/nuestrosDiseños"
+      lista={datos.taller}
+      color=""
+    />
+
+    <CardPr 
+      imagenUrl={seleccionarImagen("bar.webp")}
+      tipo="Comercial"
+      titulo="Restaurante Andrés Carne de Res – Bogotá y Medellín"
+      direccion="/nuestrosDiseños"
+      lista={datos.andres}
+      color="Azul"
+    />
+
+    <CardPr 
+      imagenUrl={seleccionarImagen("bar.webp")}
+      tipo="Comercial"
+      titulo="Oficina VEOLIA – Edificio AB Proyectos – Bogotá"
+      direccion="/nuestrosDiseños"
+      lista={datos.veolia}
+      color="Azul"
+    />
+
+    <CardPr 
+      imagenUrl={seleccionarImagen("bar.webp")}
+      tipo="Comercial"
+      titulo="Coliseo Live – Cota, Cundinamarca"
+      direccion="/nuestrosDiseños"
+      lista={datos.veolia}
+      color="Azul"
+    />
+
+
+
   </div>
 </section>
