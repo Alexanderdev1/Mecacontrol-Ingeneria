@@ -2,67 +2,73 @@
 
 ---
 
-<section class=" w-full py-10 bg-gray-100"> 
-  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 px-6">
+<section class="w-full py-8 sm:py-10 bg-gray-100">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-4 sm:px-6">
     
     <!-- LOGO CON TITULO -->
-    <div class="text-center">
-      <img src="/icons/logo.webp" alt="logo principal" class="w-32 mx-auto mb-2">
-      <p class="text-black">Somos una empresa grande</p>
+    <div class="text-center sm:text-left">
+      <img src="/icons/logo.webp" alt="logo principal" class="w-28 sm:w-32 mx-auto sm:mx-0 mb-2">
+      <p class="text-black text-sm sm:text-base">Somos una empresa especializada en soluciones eléctricas integrales</p>
     </div>
 
     <!-- ENLACES -->
-    <div>
-      <h3 class="font-bold text-black mb-4 text-lg text-center">Enlaces rápidos</h3>
-      <ul class="flex flex-col items-center gap-2 text-black text-sm">
-        <li><a href="/">Inicio</a></li>
-        <li><a href="/servicios">Servicios</a></li>
-        <li><a href="/proyectos">Proyectos</a></li>
-        <li><a href="/sobreNosotros">Nosotros</a></li>
-        <li><a href="/contacto">Contacto</a></li>
+    <div class="text-center sm:text-left">
+      <h3 class="font-bold text-black mb-3 sm:mb-4 text-base sm:text-lg">Enlaces rápidos</h3>
+      <ul class="flex flex-col items-center sm:items-start gap-1 sm:gap-2 text-black text-xs sm:text-sm">
+        <li><a href="/" class="hover:text-red-600 transition">Inicio</a></li>
+        <li><a href="/servicios" class="hover:text-red-600 transition">Servicios</a></li>
+        <li><a href="/proyectos" class="hover:text-red-600 transition">Proyectos</a></li>
+        <li><a href="/sobreNosotros" class="hover:text-red-600 transition">Nosotros</a></li>
+        <li><a href="/contacto" class="hover:text-red-600 transition">Contacto</a></li>
       </ul>
     </div>
 
     <!-- SERVICIOS -->
-    <div>
-      <h3 class="font-bold text-black mb-4 text-lg text-left">Servicios</h3>
-      <ul class="flex flex-col items-justify gap-2 text-black text-sm">
-        <li><a href="/servicios">Proyectos eléctricos</a></li>
-        <li><a href="/servicios">telecomunicaciones</a></li>
-        <li><a href="/servicios">Cableado estructurado</a></li>
-        <li><a href="/servicios">Electricidad de media y baja tensión</a></li>
-        <li><a href="/servicios">Seguridad electónica</a></li>
-        <li><a href="/servicios">Automatización</a></li>
-        <li><a href="/servicios">Ingenieria civil</a></li>
-        <li><a href="/servicios">Arquitectura</a></li>
-        <li><a href="/servicios">Iluminación</a></li>
+    <div class="text-center sm:text-left">
+      <h3 class="font-bold text-black mb-3 sm:mb-4 text-base sm:text-lg">Servicios</h3>
+      <ul class="grid grid-cols-2 sm:grid-cols-1 gap-1 sm:gap-2 text-black text-xs sm:text-sm">
+        <li><a href="/servicios" class="hover:text-red-600 transition">Proyectos eléctricos</a></li>
+        <li><a href="/servicios" class="hover:text-red-600 transition">Telecomunicaciones</a></li>
+        <li><a href="/servicios" class="hover:text-red-600 transition">Cableado estructurado</a></li>
+        <li><a href="/servicios" class="hover:text-red-600 transition">Media/baja tensión</a></li>
+        <li><a href="/servicios" class="hover:text-red-600 transition">Seguridad electrónica</a></li>
+        <li><a href="/servicios" class="hover:text-red-600 transition">Automatización</a></li>
+        <li><a href="/servicios" class="hover:text-red-600 transition">Ingeniería civil</a></li>
+        <li><a href="/servicios" class="hover:text-red-600 transition">Arquitectura</a></li>
+        <li><a href="/servicios" class="hover:text-red-600 transition">Iluminación</a></li>
       </ul>
     </div>
 
     <!-- CONTACTO -->
-    <div>
-      <h3 class="font-bold text-black mb-4 text-lg text-center">Contacto</h3>
-      <div class="flex flex-col gap-4 text-black text-sm items-left">
-        <div class="flex items-left gap-2">
-          <img src="/icons/llamada.webp" alt="Telefono" class="w-5 h-5">
-          <span>Teléfono: 310 3118182</span>
+    <div class="text-center sm:text-left">
+      <h3 class="font-bold text-black mb-3 sm:mb-4 text-base sm:text-lg">Contacto</h3>
+      <div class="flex flex-col gap-2 sm:gap-3 text-black text-xs sm:text-sm">
+        <div class="flex items-center justify-center sm:justify-start gap-2">
+          <img src="/icons/llamada.webp" alt="Telefono" class="w-4 h-4 sm:w-5 sm:h-5">
+          <span>310 3118182</span>
         </div>
 
-        <div class="flex items-left gap-2">
-          <img src="/icons/correo.webp" alt="Correo" class="w-5 h-5">
-          <span>Email: mecacontrol2012@gmail.com</span>
+        <div class="flex items-center justify-center sm:justify-start gap-2">
+          <img src="/icons/correo.webp" alt="Correo" class="w-4 h-4 sm:w-5 sm:h-5">
+          <span>mecacontrol2012@gmail.com</span>
         </div>
 
-        <div class="flex items-left gap-2">
-          <img src="/icons/locacion.webp" alt="Ubicacion" class="w-5 h-5">
-          <span>Ubicación: Cll 58c Bis Sur #84-05 Bogotá (Oficina 301)</span>
+        <div class="flex items-center justify-center sm:justify-start gap-2">
+          <img src="/icons/locacion.webp" alt="Ubicacion" class="w-4 h-4 sm:w-5 sm:h-5">
+          <span>Cll 58c Bis Sur #84-05<br>Bogotá (Oficina 301)</span>
         </div> 
-        <div class="flex items-left gap-2">
-          <img src="/icons/reloj.webp" alt="Ubicacion" class="w-5 h-5">
-          <span>Horario: 8:00 AM - 6:00 PM</span>
+
+        <div class="flex items-center justify-center sm:justify-start gap-2">
+          <img src="/icons/reloj.webp" alt="Horario" class="w-4 h-4 sm:w-5 sm:h-5">
+          <span>8:00 AM - 6:00 PM</span>
         </div> 
       </div>
     </div>
 
+  </div>
+
+
+  <div class="max-w-7xl mx-auto mt-8 pt-4 border-t border-gray-300 text-center text-xs text-gray-600 px-4">
+    © 2025 Mecacontrol Ingeniería. Todos los derechos reservados.
   </div>
 </section>

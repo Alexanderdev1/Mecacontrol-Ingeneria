@@ -5,13 +5,27 @@ import ImgCard from "../ui/imgCard.astro";
 const seleccionarImag = (name:string) => `/imagenes/logosEmpresas/comercial/${name}`;
 ---
 
-<section class="mx-auto w-[1000px] h-[800px] mt-1 mb-10">
-    <h2 class="text-center font-bold text-red-600 text-3xl">Nuestros clientes</h2>
-    <p class="text-center mt-12">Estos son unos de nuestros clientes que confiaron en nosotros</p>
+<section class="mx-auto w-full max-w-[1000px] px-4 sm:px-6 lg:px-8 py-8 md:py-12 mt-4 mb-8 md:mb-12">
+    <h2 class="text-center font-bold text-red-600 text-2xl sm:text-3xl md:text-4xl">Nuestros clientes</h2>
+    <p class="text-center mt-6 sm:mt-8 md:mt-12 text-sm sm:text-base md:text-lg text-gray-700 max-w-2xl mx-auto">
+        Estos son algunos de nuestros clientes que confiaron en nosotros
+    </p>
 
-    <div class="grid grid-cols-3 gap-6 mt-12">
-        <ImgCard imagenUrl={seleccionarImag("disarko.webp")} titulo="Disarko"/>
-        <ImgCard imagenUrl={seleccionarImag("coliseo.webp")} titulo="Coliseo Medplus"/>
-        <ImgCard imagenUrl={seleccionarImag("veolia.webp")} titulo="Veolia"/>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mt-8 sm:mt-10 md:mt-12">
+        <ImgCard 
+            imagenUrl={seleccionarImag("disarko.webp")} 
+            titulo="Disarko"
+            
+        />
+        <ImgCard 
+            imagenUrl={seleccionarImag("coliseo.webp")} 
+            titulo="Coliseo Medplus"
+            
+        />
+        <ImgCard 
+            imagenUrl={seleccionarImag("veolia.webp")} 
+            titulo="Veolia"
+            
+        />
     </div>
 </section>

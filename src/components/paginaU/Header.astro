@@ -4,52 +4,97 @@ import logo from '../../../public/icons/logo.webp'
 ---
 
 <header id="principal-header" class="fixed top-0 left-0 w-full bg-transparent z-50 transition-all duration-300 ease-in-out">
-    <div id="contenedor-header" class="max-w-7xl mx-auto px-12 sm:px-6 lg:px-8 py-6 transition-all duration-300 ease-in-out">
-      <div class="flex justify-between items-center h-16 ml-8 ">
+  <div class="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8 py-4 transition-all duration-300 ease-in-out">
+    <div class="flex justify-between items-center h-16">
+      <!-- Logo -->
+      <a href="/">
+        <img src="/icons/logo.webp" alt="Logo mecatronic"
+          class="h-20 w-28 bg-cover cursor-pointer rounded-2xl hover:scale-95 hover:shadow-red-900 transition" />
+      </a>
 
-        <a href="/"><Image src={logo} alt="Logo mecatronic" class="h-20 w-28 bg-cover cursor-pointer rounded-2xl overflow-hidden  hover:scale-95 hover:shadow-red-900" id="logoM"/></a>
+      <!-- Botón hamburguesa  -->
+      <button id="menu-toggle" class="text-black sm:hidden focus:outline-none">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
 
-        <nav id="navegacion" class="space-x-6 text-black/70 font-bold text-sm px-12 ">
-          <a href="/sobreNosotros" class="nav-link hover:text-red-700 transition relative inline-block  after:absolute after:left-1/2 after:bottom-0 after:h-[1px] after:w-0
-                             after:bg-current after:transition-all after:duration-500 hover:after:left-0 hover:after:w-full" >Sobre Nosotros</a>
-          <a href="/servicios" class="nav-link hover:text-red-700 transition relative inline-block  after:absolute after:left-1/2 after:bottom-0 after:h-[1px] after:w-0
-                             after:bg-current after:transition-all after:duration-500 hover:after:left-0 hover:after:w-full" >Servicios</a>
-          <a href="/proyectos" class="nav-link hover:text-red-700 transition relative inline-block  after:absolute after:left-1/2 after:bottom-0 after:h-[1px] after:w-0
-                             after:bg-current after:transition-all after:duration-500 hover:after:left-0 hover:after:w-full" >Proyectos</a>
-          <a href="/nuestrosClientes" class="nav-link hover:text-red-700 transition relative inline-block  after:absolute after:left-1/2 after:bottom-0 after:h-[1px] after:w-0
-                             after:bg-current after:transition-all after:duration-500 hover:after:left-0 hover:after:w-full" >Nuestros Clientes</a>
-          <a href="/nuestrosDiseños" class="nav-link hover:text-red-700 transition relative inline-block  after:absolute after:left-1/2 after:bottom-0 after:h-[1px] after:w-0
-                             after:bg-current after:transition-all after:duration-500 hover:after:left-0 hover:after:w-full">Nuestros Diseños</a>
-          <a href="/contacto" class="nav-link hover:text-red-700 transition relative inline-block  after:absolute after:left-1/2 after:bottom-0 after:h-[1px] after:w-0
-                             after:bg-current after:transition-all after:duration-500 hover:after:left-0 hover:after:w-full" >Contacto</a>
-        </nav>
+      <!-- Navegación -->
+      <nav id="navegacion"
+        class="hidden sm:flex space-x-6 text-black/70 font-bold text-sm px-6">
+        <a href="/sobreNosotros" class="nav-link hover:text-red-700 transition relative after:absolute after:left-1/2 after:bottom-0 after:h-[1px] after:w-0 after:bg-current after:transition-all after:duration-500 hover:after:left-0 hover:after:w-full">Sobre Nosotros</a>
+        <a href="/servicios" class="nav-link hover:text-red-700 transition relative after:absolute after:left-1/2 after:bottom-0 after:h-[1px] after:w-0 after:bg-current after:transition-all after:duration-500 hover:after:left-0 hover:after:w-full">Servicios</a>
+        <a href="/proyectos" class="nav-link hover:text-red-700 transition relative after:absolute after:left-1/2 after:bottom-0 after:h-[1px] after:w-0 after:bg-current after:transition-all after:duration-500 hover:after:left-0 hover:after:w-full">Proyectos</a>
+        <a href="/nuestrosClientes" class="nav-link hover:text-red-700 transition relative after:absolute after:left-1/2 after:bottom-0 after:h-[1px] after:w-0 after:bg-current after:transition-all after:duration-500 hover:after:left-0 hover:after:w-full">Nuestros Clientes</a>
+        <a href="/nuestrosDiseños" class="nav-link hover:text-red-700 transition relative after:absolute after:left-1/2 after:bottom-0 after:h-[1px] after:w-0 after:bg-current after:transition-all after:duration-500 hover:after:left-0 hover:after:w-full">Nuestros Diseños</a>
+        <a href="/contacto" class="nav-link hover:text-red-700 transition relative after:absolute after:left-1/2 after:bottom-0 after:h-[1px] after:w-0 after:bg-current after:transition-all after:duration-500 hover:after:left-0 hover:after:w-full">Contacto</a>
+      </nav>
+    </div>
+
+    <!-- Menú móvil (modificado para lista vertical) -->
+    <div id="mobile-menu" class="sm:hidden hidden w-full bg-white shadow-lg rounded-lg mt-2 py-2 absolute left-0 right-0 mx-auto max-w-7xl px-6">
+      <div class="flex flex-col space-y-3">
+        <a href="/sobreNosotros" class="hover:text-red-700 mobile-link py-2 border-b border-gray-100">Sobre Nosotros</a>
+        <a href="/servicios" class="hover:text-red-700 mobile-link py-2 border-b border-gray-100">Servicios</a>
+        <a href="/proyectos" class="hover:text-red-700 mobile-link py-2 border-b border-gray-100">Proyectos</a>
+        <a href="/nuestrosClientes" class="hover:text-red-700 mobile-link py-2 border-b border-gray-100">Nuestros Clientes</a>
+        <a href="/nuestrosDiseños" class="hover:text-red-700 mobile-link py-2 border-b border-gray-100">Nuestros Diseños</a>
+        <a href="/contacto" class="hover:text-red-700 mobile-link py-2">Contacto</a>
       </div>
     </div>
+  </div>
 </header>
-  
 
-<script is:inline>
-    const header = document.getElementById("principal-header");
-    const content = document.getElementById("contenedor-header");
-    const logoM = document.getElementById("logoM");
-    const navss=document.getElementById("navegacion")
-  
-  window.addEventListener("scroll", () => {
-  if (window.scrollY > 0) {
-    content.classList.remove("py-6");
-    content.classList.add("py-2");
-    
-    header.classList.remove("bg-transparent");
-    header.classList.add("shadow-md", "bg-white");
+<script>
+  const toggleBtn = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const mobileLinks = document.querySelectorAll('.mobile-link');
+  const header = document.getElementById("principal-header");
+  const content = document.querySelector(".max-w-7xl");
 
+  if (toggleBtn && mobileMenu) {
+    toggleBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      mobileMenu.classList.toggle('animate-fadeInDown');
+    });
 
-  } else {
-    content.classList.remove("py-2");
-    content.classList.add("py-6");
-
-    header.classList.remove("shadow-md", "bg-white");
-    header.classList.add("bg-transparent");
-
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
   }
-});
+
+  if (header && content) {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 0) {
+        content.classList.remove("py-6");
+        content.classList.add("py-2");
+        header.classList.remove("bg-transparent");
+        header.classList.add("shadow-md", "bg-white");
+      } else {
+        content.classList.remove("py-2");
+        content.classList.add("py-6");
+        header.classList.remove("shadow-md", "bg-white");
+        header.classList.add("bg-transparent");
+      }
+    });
+  }
 </script>
+
+<style>
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .animate-fadeInDown {
+    animation: fadeInDown 0.3s ease-out;
+  }
+</style>

@@ -2,29 +2,29 @@
 import Card from "../ui/Card.astro";
 ---
 
-<section class="mx-auto w-[1000px] h-[1700px] mt-11">
+<section class="mx-auto w-full max-w-[1000px] px-4 sm:px-6 lg:px-8 py-8 md:py-11">
 
-    <h2 class="text-center font-bold text-red-600 text-3xl">Nuestros servicios</h2>
+    <h2 class="text-center font-bold text-red-600 text-2xl sm:text-3xl md:text-4xl">Nuestros servicios</h2>
 
-    <p class="mt-12 text-center">
+    <p class="mt-6 sm:mt-8 md:mt-12 text-center text-sm sm:text-base md:text-lg max-w-4xl mx-auto">
       Somos una empresa especializada en diseño, construcción y diagnóstico de proyectos 
       eléctricos en media y baja tensión. Ofrecemos servicios en telecomunicaciones, automatización,
-      iluminación, ingeniería civil, arquitectura y seguridad Electronica, con un enfoque en la calidad, la innovación
+      iluminación, ingeniería civil, arquitectura y seguridad electrónica, con un enfoque en la calidad, la innovación
       y la seguridad en el trabajo. Brindamos soluciones eficientes y confiables adaptadas a las necesidades de cada cliente.
     </p>
 
-    <!--Contenedor de los grid -->
-    <div class="grid grid-cols-3 gap-5 mt-10">
+    <!-- Contenedor de los grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 mt-8 sm:mt-10 md:mt-12">
 
-        <!--Proyectos electricos -->
+        <!-- Proyectos electricos -->
         <Card 
             imagenUrl="/imagenes/electricos.jpg"
-            titulo="Proyectos Electricos" 
+            titulo="Proyectos Eléctricos" 
             descripcion="Instalaciones eléctricas en media y baja tensión, subestaciones, tableros de distribución y sistemas de puesta a tierra para edificaciones comerciales, industriales y residenciales."
             direccion="/servicios"
         />
 
-        <!--Iluminacion -->
+        <!-- Telecomunicaciones -->
         <Card 
             imagenUrl="/imagenes/telecomunicaciones.webp"
             titulo="Telecomunicaciones"
@@ -32,8 +32,7 @@ import Card from "../ui/Card.astro";
             direccion="/servicios"
         />
     
-        <!--Cableado estructurado -->
-
+        <!-- Cableado estructurado -->
         <Card 
             imagenUrl="/imagenes/cableado.webp"
             titulo="Cableado Estructurado"
@@ -41,34 +40,39 @@ import Card from "../ui/Card.astro";
             direccion="/servicios"
         />
 
+        <!-- Electricidad Media/Baja -->
         <Card 
             imagenUrl="/imagenes/electricidadBaja.webp"
-            titulo="Electricidad Media y baja tencion"
+            titulo="Electricidad Media y Baja Tensión"
             descripcion="Diseño, instalación y mantenimiento de redes eléctricas, subestaciones y tableros para proyectos industriales, comerciales y residenciales."
             direccion="/servicios"
         />
 
+        <!-- Seguridad Electronica -->
         <Card 
             imagenUrl="/imagenes/seguridad.webp" 
-            titulo="Seguridad Electronica"
-            descripcion=" Implementación de sistemas de videovigilancia, alarmas, control de acceso, detección de incendios y protección perimetral."
+            titulo="Seguridad Electrónica"
+            descripcion="Implementación de sistemas de videovigilancia, alarmas, control de acceso, detección de incendios y protección perimetral."
             direccion="/servicios"
         />
 
+        <!-- Automatizacion -->
         <Card 
             imagenUrl="/imagenes/automatizacion.webp" 
-            titulo="Automatizacion"
+            titulo="Automatización"
             descripcion="Soluciones en automatización industrial, domótica, instrumentación de campo y sistemas SCADA."
             direccion="/servicios"
         />
 
+        <!-- Ingeneria civil -->
         <Card 
             imagenUrl="/imagenes/civil.webp" 
-            titulo="Ingeneria civil"
+            titulo="Ingeniería Civil"
             descripcion="Construcción de obras civiles como viviendas, bodegas, muros de contención, y estructuras técnicas para redes eléctricas."
             direccion="/servicios"
         />
 
+        <!-- Arquitectura -->
         <Card 
             imagenUrl="/imagenes/arquitectura.webp" 
             titulo="Arquitectura"
@@ -76,13 +80,13 @@ import Card from "../ui/Card.astro";
             direccion="/servicios"
         />
 
-         <Card 
+        <!-- Iluminacion -->
+        <Card 
             imagenUrl="/imagenes/iluminacion.webp" 
-            titulo="Iluminacion"
+            titulo="Iluminación"
             descripcion="Proyectos de iluminación interior y exterior con enfoque estético, funcional y de eficiencia energética."
             direccion="/servicios"
         />
     </div>
     
 </section>
-

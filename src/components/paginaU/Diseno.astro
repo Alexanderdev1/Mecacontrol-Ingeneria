@@ -3,17 +3,16 @@ import Card from "../ui/Card.astro";
 
 ---
 
-<section class="mx-auto w-[1000px] h-[800px] mt-2">
-    <h2 class="text-center font-bold text-red-600 text-3xl">Nuestros Diseños</h2>
+<section class="mx-auto w-full max-w-[1000px] px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+    <h2 class="text-center font-bold text-red-600 text-2xl sm:text-3xl md:text-4xl">Nuestros Diseños</h2>
 
-    <p class="mt-12 text-center">
-      Diseñamos soluciones electricas integrales, eficientes y seguras para proyectos residenciales, comerciales e industriales, combinando tecnologia, normativa y estetica para garantizar calidad y funcionalidad
+    <p class="mt-6 sm:mt-8 md:mt-12 text-center text-sm sm:text-base md:text-[16px] max-w-2xl mx-auto leading-relaxed">
+      Diseñamos soluciones eléctricas integrales, eficientes y seguras para proyectos residenciales, comerciales e industriales, combinando tecnología, normativa y estética para garantizar calidad y funcionalidad.
     </p>
 
-    <!--Contenedor de los grid -->
-    <div class="grid grid-cols-3 gap-5 mt-10">
-
-        <!--Residencial -->
+    <!-- Contenedor del grid responsive -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 mt-8 sm:mt-10 md:mt-12">
+        <!-- Residencial -->
         <Card 
             imagenUrl="/imagenes/residencial.webp"
             titulo="Residencial"
@@ -21,7 +20,7 @@ import Card from "../ui/Card.astro";
             direccion="/nuestrosDiseños"
         />
 
-        <!--Comercial -->
+        <!-- Comercial -->
         <Card 
             imagenUrl="/imagenes/bar.webp"
             titulo="Comercial"
@@ -29,14 +28,12 @@ import Card from "../ui/Card.astro";
             direccion="/nuestrosDiseños"
         />
 
-        <!--Industrial -->
+        <!-- Industrial -->
         <Card 
             imagenUrl="/imagenes/industrial.webp"
             titulo="Industrial"
             descripcion="Desarrollo de sistemas eléctricos de potencia, automatización de procesos, cableado estructurado y telecomunicaciones de alta capacidad para plantas y entornos productivos."
             direccion="/nuestrosDiseños"
         />
-
     </div>
-    
 </section>
